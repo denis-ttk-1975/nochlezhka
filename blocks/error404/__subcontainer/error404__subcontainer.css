@@ -1,0 +1,5 @@
+.error404__subcontainer {
+  display: flex;
+  flex-direction: column;
+  border: 3px solid red;
+}

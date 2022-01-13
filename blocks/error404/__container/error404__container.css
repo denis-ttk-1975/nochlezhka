@@ -1,0 +1,7 @@
+.error404__container {
+display: flex;
+border: 3px solid red;
+margin: 248px auto 160px;
+max-width: 880px;
+justify-content: space-between;
+}

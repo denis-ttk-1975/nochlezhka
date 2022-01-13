@@ -1,0 +1,36 @@
+.error404__at-main-page {
+  padding: 12px 24px;
+  width: 145px;
+  height: 48px;
+
+  border: 2px solid #3B3748;
+
+  border-radius: 26px;
+  text-decoration: none;
+  color: #3B3748;
+  font-family: TT_Firs_Neue;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 24px;
+  margin: 0 auto 0 ;
+}
+
+@media screen and (min-width: 360.98px) {
+  .about-action__learn-more {
+    padding: 12px 24px;
+    margin: 0 auto;
+    font-size: 18px;
+    line-height: 24px;
+    border-radius: 26px;
+  }
+}
+
+@media screen and (min-width: 768.98px) {
+  .about-action__learn-more {
+    grid-area: 2/2;
+    margin: 0 auto 0 ;
+  }
+}
+
+
