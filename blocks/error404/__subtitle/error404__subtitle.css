@@ -5,5 +5,15 @@
   font-size: 24px;
   line-height: 24px;
   color: #3B3748;
-  margin: 16px 0 24px;
+  margin: 0 auto 24px 0;
 }
+
+@media screen and (max-width: 700px) {
+  .error404__subtitle {
+    font-size: 20px;
+    line-height: 24px;
+    margin: 0 0 20px;
+  }
+}
+
+
