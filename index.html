@@ -780,23 +780,40 @@
             <button
               type="button"
               class="popup__sum-of-money popup__sum-of-money_active page__button"
+              data-donate="100"
             >
               <span class="popup__sum-of-money-text">100 ₽</span>
             </button>
-            <button type="button" class="popup__sum-of-money page__button">
+            <button
+              type="button"
+              class="popup__sum-of-money page__button"
+              data-donate="300"
+            >
               <span class="popup__sum-of-money-text">300 ₽</span>
             </button>
-            <button type="button" class="popup__sum-of-money page__button">
+            <button
+              type="button"
+              class="popup__sum-of-money page__button"
+              data-donate="500"
+            >
               <span class="popup__sum-of-money-text">500 ₽</span>
             </button>
-            <button type="button" class="popup__sum-of-money page__button">
+            <button
+              type="button"
+              class="popup__sum-of-money page__button"
+              data-donate="1000"
+            >
               <span class="popup__sum-of-money-text">1000 ₽</span>
             </button>
-            <button type="button" class="popup__sum-of-money page__button">
+            <button
+              type="button"
+              class="popup__sum-of-money page__button"
+              data-donate="3000"
+            >
               <span class="popup__sum-of-money-text">3000 ₽</span>
             </button>
             <input
-              type="text"
+              type="number"
               name="sum-of-money"
               id="sum-of-money"
               placeholder="другая сумма"
@@ -893,15 +910,16 @@
           <div class="popup__ticket-label">
             <p class="popup__ticket-price">500 ₽</p>
             <div class="popup__ticket-quantity-wrap">
-              <button class="popup__ticket-plus-minus">-</button>
+              <button class="popup__ticket-plus-minus minus">-</button>
               <input
-                type="text"
+                type="number"
                 value="1"
-                size="2"
+                min="1"
+                max="99"
+                step="1"
                 class="popup__ticket-quantity"
-                data-max-count="20"
               />
-              <button class="popup__ticket-plus-minus">+</button>
+              <button class="popup__ticket-plus-minus plus">+</button>
             </div>
           </div>
           <p class="popup__donate-text">email</p>

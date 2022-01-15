@@ -108,6 +108,32 @@ const sumOfMoneyButton = popupDonate.querySelectorAll(".popup__sum-of-money");
 const inputSum = popupDonate.querySelector(".popup__sum-of-money-input");
 const header = document.querySelector(".header");
 
+const ticketFormElement = document.querySelector('[name = "ticket"]');
+const ticketPayment = ticketFormElement.querySelectorAll(
+  '[name = "payment-ticket"]'
+);
+
+const plusButtonTicketQuantity = ticketFormElement.querySelector(".plus");
+const minusButtonTicketQuantity = ticketFormElement.querySelector(".minus");
+const ticketQuantityCounter = ticketFormElement.querySelector(
+  ".popup__ticket-quantity"
+);
+
+function addTicketQuantity() {
+  if (+ticketQuantityCounter.value < 99) {
+    ticketQuantityCounter.value = +ticketQuantityCounter.value + 1;
+  }
+}
+
+function subtractTicketQuantity() {
+  if (+ticketQuantityCounter.value > 1) {
+    ticketQuantityCounter.value = +ticketQuantityCounter.value - 1;
+  }
+}
+
+plusButtonTicketQuantity.addEventListener("click", addTicketQuantity);
+minusButtonTicketQuantity.addEventListener("click", subtractTicketQuantity);
+
 function openPopup(popup) {
   popup.classList.add("popup_opened");
 }
@@ -208,6 +234,21 @@ const donateFormElement = document.querySelector('[name = "donate"]');
 
 donateFormElement.addEventListener("submit", (evt) => {
   evt.preventDefault();
+  let donateValueInputed;
+
+  if (document.querySelector(".popup__sum-of-money_active") != null) {
+    donateValueInputed = document.querySelector(".popup__sum-of-money_active")
+      .dataset.donate;
+  } else {
+    donateValueInputed = document.querySelector("#sum-of-money").value;
+  }
+
+  let donateFormData = {
+    donateValue: donateValueInputed,
+    email: donateFormElement.querySelector(".popup__email-input").value,
+    payment: donateFormElement.querySelector('[name="payment"]:checked').value,
+  };
+  console.log(donateFormData);
   closePopup(popupDonate);
   sumOfMoneyButton.forEach(function (item) {
     item.classList.remove("popup__sum-of-money_active");
@@ -216,12 +257,15 @@ donateFormElement.addEventListener("submit", (evt) => {
   donateFormElement.reset();
 });
 
-const ticketFormElement = document.querySelector('[name = "ticket"]');
-
 ticketFormElement.addEventListener("submit", (evt) => {
   evt.preventDefault();
+  let ticketFormData = {
+    ticketQuantity: +ticketQuantityCounter.value,
+    email: ticketFormElement.querySelector(".popup__email-input").value,
+    payment: ticketFormElement.querySelector('[name="payment-ticket"]:checked')
+      .value,
+  };
+  console.log(ticketFormData);
   closePopup(popupTicket);
   ticketFormElement.reset();
 });
-
-console.log(document.querySelectorAll(".popup__form-radio"));
