@@ -106,6 +106,7 @@ const closeTicketButton = popupTicket.querySelector(
 
 const sumOfMoneyButton = popupDonate.querySelectorAll(".popup__sum-of-money");
 const inputSum = popupDonate.querySelector(".popup__sum-of-money-input");
+const paymentButton = popupDonate.querySelector(".popup__donate-button");
 const header = document.querySelector(".header");
 
 const ticketFormElement = document.querySelector('[name = "ticket"]');
@@ -140,6 +141,10 @@ function openPopup(popup) {
 
 function closePopup(popup) {
   popup.classList.remove("popup_opened");
+}
+
+function makePayment () {
+  window.location.href = 'thanks-for-help.html';
 }
 
 const eventsCards = document.querySelectorAll(".events__card");
@@ -195,9 +200,14 @@ openDonateButtonInHeader.addEventListener("click", function () {
 closeDonateButton.addEventListener("click", function () {
   closePopup(popupDonate);
 });
+
 closeTicketButton.addEventListener("click", function () {
   closePopup(popupTicket);
 });
+
+paymentButton.addEventListener('click', function () {
+  makePayment()
+})
 
 sumOfMoneyButton.forEach(function (item) {
   item.addEventListener("click", function () {
