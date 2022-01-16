@@ -24,7 +24,7 @@ function closePopup (popup) {
 }
 
 function makePayment () {
-  window.location.href = 'thanks-for-help.html';
+  window.location.href = './thanks-for-help.html';
 }
 
 const eventsCards = document.querySelectorAll(".events__card");

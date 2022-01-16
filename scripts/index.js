@@ -273,7 +273,7 @@ ticketFormElement.addEventListener("submit", (evt) => {
 const paymentButton = popupDonate.querySelector('.popup__donate-button');
 
 function makePayment () {
-  window.location.href = 'thanks-for-help.html';
+  window.location.href = './thanks-for-help.html';
 }
 
 paymentButton.addEventListener('click', function () {
