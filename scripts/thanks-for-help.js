@@ -12,6 +12,7 @@ const popupDonate = document.querySelector('.popup_type_donate')
 const closeDonateButton = popupDonate.querySelector('.popup__donate-close-button')
 const sumOfMoneyButton = popupDonate.querySelectorAll('.popup__sum-of-money')
 const inputSum = popupDonate.querySelector('.popup__sum-of-money-input')
+const paymentButton = popupDonate.querySelector('.popup__donate-button')
 const header = document.querySelector('.header')
 
 function openPopup (popup) {
@@ -20,6 +21,10 @@ function openPopup (popup) {
 
 function closePopup (popup) {
   popup.classList.remove('popup_opened')
+}
+
+function makePayment () {
+  window.location.href = 'index.html';
 }
 
 const eventsCards = document.querySelectorAll(".events__card");
@@ -67,11 +72,15 @@ openDonateButtonInPopup.addEventListener('click', function () {
 })
 
 openDonateButtonInHeader.addEventListener('click', function () {
-  window.location.href = 'index.html';
+  openPopup(popupDonate)
 })
 
 closeDonateButton.addEventListener('click', function () {
   closePopup(popupDonate)
+})
+
+makeDonateButton.addEventListener('click', function () {
+  makePayment()
 })
 
 sumOfMoneyButton.forEach(function (item) {
