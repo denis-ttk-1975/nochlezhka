@@ -24,7 +24,7 @@ function closePopup (popup) {
 }
 
 function makePayment () {
-  window.location.href = 'index.html';
+  window.location.href = 'thanks-for-help.html';
 }
 
 const eventsCards = document.querySelectorAll(".events__card");
@@ -79,7 +79,7 @@ closeDonateButton.addEventListener('click', function () {
   closePopup(popupDonate)
 })
 
-makeDonateButton.addEventListener('click', function () {
+paymentButton.addEventListener('click', function () {
   makePayment()
 })
 
