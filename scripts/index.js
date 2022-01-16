@@ -68,35 +68,53 @@ function initPage(button){
 
 initPage(sliderLadyButton);
 
-const popupMenu = document.querySelector('.popup_type_menu');
-const menuButton = document.querySelector('.header__menu-button');
-const changeCityButton = popupMenu.querySelector('.popup__change-city-button');
-const popupChangeCity = document.querySelector('.popup_type_change-city');
-const backButton = popupChangeCity.querySelector('.popup__back-button');
-const formChangeCity = popupChangeCity.querySelector('.popup__change-city-form');
-const labelCity = formChangeCity.querySelectorAll('.popup__form-radio');
-const cityName = popupMenu.querySelector('.popup__city-name');
-const openDonateButtonInPopup = popupMenu.querySelector('.popup__open-donate-button');
-const openDonateButtonInHeader = document.querySelector('.header__donate-button');
-const popupDonate = document.querySelector('.popup_type_donate');
+const popupMenu = document.querySelector(".popup_type_menu");
+const menuButton = document.querySelector(".header__menu-button");
+const changeCityButton = popupMenu.querySelector(".popup__change-city-button");
+const popupChangeCity = document.querySelector(".popup_type_change-city");
+const backButton = popupChangeCity.querySelector(".popup__back-button");
+const formChangeCity = popupChangeCity.querySelector(
+  ".popup__change-city-form"
+);
+const labelCity = formChangeCity.querySelectorAll(".popup__form-radio");
+const cityName = popupMenu.querySelector(".popup__city-name");
+const openDonateButtonInPopup = popupMenu.querySelector(
+  ".popup__open-donate-button"
+);
+const openDonateButtonInHeader = document.querySelector(
+  ".header__donate-button"
+);
+const popupDonate = document.querySelector(".popup_type_donate");
 const popupTicket = document.querySelector(".popup_type_ticket");
-const closeDonateButton = popupDonate.querySelector('.popup__donate-close-button');
-const closeTicketButton = popupTicket.querySelector('.popup__donate-close-button');
-const sumOfMoneyButton = popupDonate.querySelectorAll('.popup__sum-of-money');
-const inputSum = popupDonate.querySelector('.popup__sum-of-money-input');
-const paymentButton = popupDonate.querySelector('.popup__donate-button');
-const header = document.querySelector('.header');
+
+const closeDonateButton = popupDonate.querySelector(
+  ".popup__donate-close-button"
+);
+const closeTicketButton = popupTicket.querySelector(
+  ".popup__donate-close-button"
+);
+
+const sumOfMoneyButton = popupDonate.querySelectorAll(".popup__sum-of-money");
+const inputSum = popupDonate.querySelector(".popup__sum-of-money-input");
+const paymentButton = popupDonate.querySelector(".popup__donate-button");
+const header = document.querySelector(".header");
 
 const ticketFormElement = document.querySelector('[name = "ticket"]');
-const ticketPayment = ticketFormElement.querySelectorAll('[name = "payment-ticket"]');
+const ticketPayment = ticketFormElement.querySelectorAll(
+  '[name = "payment-ticket"]'
+);
+
 const plusButtonTicketQuantity = ticketFormElement.querySelector(".plus");
 const minusButtonTicketQuantity = ticketFormElement.querySelector(".minus");
-const ticketQuantityCounter = ticketFormElement.querySelector(".popup__ticket-quantity");
+const ticketQuantityCounter = ticketFormElement.querySelector(
+  ".popup__ticket-quantity"
+);
 
 function addTicketQuantity() {
   if (+ticketQuantityCounter.value < 99) {
     ticketQuantityCounter.value = +ticketQuantityCounter.value + 1;
   }
+}
 
 function openPopup (popup) {
   popup.classList.add('popup_opened')
@@ -204,3 +222,4 @@ donateFormElement.addEventListener('submit', (evt) => {
   closePopup(popupDonate);
   donateFormElement.reset();
 });
+
