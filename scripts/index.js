@@ -106,7 +106,6 @@ const closeTicketButton = popupTicket.querySelector(
 
 const sumOfMoneyButton = popupDonate.querySelectorAll(".popup__sum-of-money");
 const inputSum = popupDonate.querySelector(".popup__sum-of-money-input");
-const paymentButton = popupDonate.querySelector(".popup__donate-button");
 const header = document.querySelector(".header");
 
 const ticketFormElement = document.querySelector('[name = "ticket"]');
@@ -126,10 +125,6 @@ function addTicketQuantity() {
   }
 }
 
-function openPopup (popup) {
-  popup.classList.add('popup_opened')
-}
-
 function subtractTicketQuantity() {
   if (+ticketQuantityCounter.value > 1) {
     ticketQuantityCounter.value = +ticketQuantityCounter.value - 1;
@@ -145,10 +140,6 @@ function openPopup(popup) {
 
 function closePopup(popup) {
   popup.classList.remove("popup_opened");
-}
-
-function makePayment () {
-  window.location.href = 'thanks-for-help.html';
 }
 
 const eventsCards = document.querySelectorAll(".events__card");
@@ -208,10 +199,6 @@ closeTicketButton.addEventListener("click", function () {
   closePopup(popupTicket);
 });
 
-paymentButton.addEventListener('click', function () {
-  makePayment()
-})
-
 sumOfMoneyButton.forEach(function (item) {
   item.addEventListener("click", function () {
     sumOfMoneyButton.forEach(function (item) {
@@ -269,7 +256,6 @@ donateFormElement.addEventListener("submit", (evt) => {
   sumOfMoneyButton[0].classList.add("popup__sum-of-money_active");
   donateFormElement.reset();
 });
-
 
 ticketFormElement.addEventListener("submit", (evt) => {
   evt.preventDefault();
