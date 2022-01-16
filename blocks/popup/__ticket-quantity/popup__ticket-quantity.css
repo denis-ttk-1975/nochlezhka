@@ -14,6 +14,18 @@
   color: #000;
 }
 
+/* Chrome, Safari, Edge, Opera */
+.popup__ticket-quantity::-webkit-outer-spin-button,
+.popup__ticket-quantity::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+.popup__ticket-quantity[type="number"] {
+  -moz-appearance: textfield;
+}
+
 @media screen and (min-width: 768.98px) {
   .popup__ticket-quantity {
     height: 48px;
