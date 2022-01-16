@@ -5,17 +5,17 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Гедонизмфест</title>
-    <link rel="stylesheet" href="./other-form.css" />
+    <link rel="stylesheet" href="./pages/party-form.css" />
   </head>
   <body class="container">
     <div class="page">
       <header class="header">
         <div class="header__container">
-          <img src="../images/logo.svg" alt="logo" class="header__logo" />
+          <img src="./images/logo.svg" alt="logo" class="header__logo" />
           <div class="header__menu">
             <button type="button" class="header__location-button page__button">
               <img
-                src="../images/location.svg"
+                src="./images/location.svg"
                 alt="location"
                 class="header__location-image"
               />
@@ -34,14 +34,14 @@
             </nav>
             <a class="header__link page__link" href="#" target="_blank">
               <img
-                src="../images/like.svg"
+                src="./images/like.svg"
                 alt="like"
                 class="header__like-image"
               />
               <p class="header__link-text">хочу пойти</p>
             </a>
             <button class="header__menu-button page__button" type="button">
-              <img src="../images/menu.svg" alt="menu" />
+              <img src="./images/menu.svg" alt="menu" />
             </button>
             <button class="header__donate-button page__button" type="button">
               <span class="header__donate-text">поддержать</span>
@@ -60,39 +60,22 @@
               <div class="form__paragraphs">
                 <p class="form__paragraph">Организуйте свою посиделку, вечеринку или концерт.</p>
                 <p class="form__paragraph">Пригласите друзей и тех, кто захочет помочь Ночлежке.</p>
-                <p class="form__paragraph">Установите пожертвование, например кусочек пирога за любую комфортную сумму.</p>
+                <p class="form__paragraph">Установите пожертвование, например кусочек пирога за любую комфортную сумму</p>
               </div>
             </div>
 
-            <form class="form__form" id="other-form" action="other-contacts.html" name="other-form">
+            <form class="form__form" id="party-form" action="party-contacts.html" name="party-form">
               <div class="form__input-container form__bottom-line">
                 <div class="form-input form-input_active form-input_place_forms">
-                  <span>другое</span>
+                  <span>посиделки/вечеринка</span>
                   <div class="form-input__checker form-input__checker_checked"></div>
                 </div>
               </div>
 
-              <fieldset class="form__radio-block form__bottom-line">
-                <div class="form__radio-container">
-                  <label class="form__radio-unit">
-                    <span class="form__radio-icon form__radio-icon_checked"></span>
-                    <input class="form__radio" type="radio" id="party-public" name="party-public" value="public" />
-                    <span>онлайн</span>
-                  </label>
-                </div>
-                <div class="form__radio-container">
-                  <label class="form__radio-unit">
-                    <span class="form__radio-icon"></span>
-                    <input class="form__radio" type="radio" id="party-private" name="party-private" value="private" />
-                    <span>оффлайн</span>
-                  </label>
-                </div>
-              </fieldset>
-
-              <fieldset class="form__labeled-container">
+              <fieldset class="form__labeled-container form__bottom-line">
                 <div class="form__unit">
                   <label class="form__label">город</label>
-                  <select class="form__field form__list" onfocus="clearErrors(this)" id="other-city" name="other-city">
+                  <select class="form__field form__city-list" onfocus="clearErrors(this)" id="party-city" name="party-city">
                     <option value="" style="display: none">выберите из списка</option>
                     <option>Москва</option>
                     <option>Санкт-Петербург</option>
@@ -107,13 +90,35 @@
                     id="event-name"
                     name="event-name"
                     type="text"
-                    placeholder="введите название мероприятия"
+                    placeholder="введите название"
                     value=""
                     onkeyup="clearErrors(this)"
                   />
                   <span class="form__error"></span>
                 </div>
+              </fieldset>
 
+              <fieldset class="form__radio-block form__bottom-line">
+                <div class="form__radio-container">
+                  <label class="form__radio-unit">
+                    <span class="form__radio-icon form__radio-icon_checked"></span>
+                    <input class="form__radio" type="radio" id="party-public" name="party-public" value="public" />
+                    <span>открытое мероприятие</span>
+                  </label>
+                  <p class="form__radio-subtitle">адрес отобразим в карточке события</p>
+                </div>
+
+                <div class="form__radio-container">
+                  <label class="form__radio-unit">
+                    <span class="form__radio-icon"></span>
+                    <input class="form__radio" type="radio" id="party-private" name="party-private" value="private" />
+                    <span>закрытое мероприятие</span>
+                  </label>
+                  <p class="form__radio-subtitle form__radio-subtitle">адрес увидят только, те кому вы оправите ссылку на событие</p>
+                </div>
+              </fieldset>
+
+              <fieldset class="form__labeled-container">
                 <div class="form__unit">
                   <label class="form__label" for="event-date">дата проведения</label>
                   <input
@@ -143,7 +148,7 @@
                 </div>
 
                 <div class="form__unit">
-                  <label class="form__label" for="contact-number">номер телефона для связи с организатором</label>
+                  <label class="form__label" for="contact-number">телефон для связи с организатором</label>
                   <input
                     class="form__field"
                     id="contact-number"
@@ -159,18 +164,20 @@
               </fieldset>
             </form>
           </div>
+
           <div class="form__controls">
             <button type="button" class="form__control_type_back form-input form__control" onclick="location.href='pick-category.html';">
               назад
             </button>
             <button
               type="submit"
-              form="other-form"
+              form="party-form"
               class="form__control_type_submit form-input form__control form__control_active"
             ></button>
           </div>
         </div>
       </main>
+
 
       <footer class="footer">
         <div class="footer__wrapper">
@@ -237,7 +244,7 @@
                   >
                     <img
                       class="footer__social-icon"
-                      src="../images/facebook-logo.svg"
+                      src="./images/facebook-logo.svg"
                       alt="Логотип Facebook"
                     />
                   </a>
@@ -250,7 +257,7 @@
                   >
                     <img
                       class="footer__social-icon"
-                      src="../images/instagram-logo.svg"
+                      src="./images/instagram-logo.svg"
                       alt="Логотип Instagram"
                     />
                   </a>
@@ -263,7 +270,7 @@
                   >
                     <img
                       class="footer__social-icon"
-                      src="../images/vkontakte-logo.svg"
+                      src="./images/vkontakte-logo.svg"
                       alt="Логотип Вконтакте"
                     />
                   </a>
@@ -273,7 +280,7 @@
           </div>
         </div>
       </footer>
-      <script src="../scripts/participant-form.js"></script>
-      <script src="../scripts/form-validator.js"></script>
+      <script src="./scripts/participant-form.js"></script>
+      <script src="./scripts/form-validator.js"></script>
     </body>
 </html>

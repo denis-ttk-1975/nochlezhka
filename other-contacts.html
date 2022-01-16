@@ -5,17 +5,17 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Гедонизмфест</title>
-    <link rel="stylesheet" href="./party-form.css" />
+    <link rel="stylesheet" href="./pages/other-contacts.html"/>
   </head>
   <body class="container">
     <div class="page">
       <header class="header">
         <div class="header__container">
-          <img src="../images/logo.svg" alt="logo" class="header__logo" />
+          <img src="./images/logo.svg" alt="logo" class="header__logo" />
           <div class="header__menu">
             <button type="button" class="header__location-button page__button">
               <img
-                src="../images/location.svg"
+                src="./images/location.svg"
                 alt="location"
                 class="header__location-image"
               />
@@ -34,14 +34,14 @@
             </nav>
             <a class="header__link page__link" href="#" target="_blank">
               <img
-                src="../images/like.svg"
+                src="./images/like.svg"
                 alt="like"
                 class="header__like-image"
               />
               <p class="header__link-text">хочу пойти</p>
             </a>
             <button class="header__menu-button page__button" type="button">
-              <img src="../images/menu.svg" alt="menu" />
+              <img src="./images/menu.svg" alt="menu" />
             </button>
             <button class="header__donate-button page__button" type="button">
               <span class="header__donate-text">поддержать</span>
@@ -54,79 +54,24 @@
         <h1 class="content__title content__title_hideable">стать участником</h1>
         <div class="form">
           <div class="form__container">
-            <p class="form__step">шаг 2 из 4</p>
+            <p class="form__step">шаг 3 из 4</p>
             <div class="form__instruction">
-              <p class="form__heading">заполните форму</p>
+              <p class="form__heading">укажите контакты и часы работы</p>
               <div class="form__paragraphs">
-                <p class="form__paragraph">Организуйте свою посиделку, вечеринку или концерт.</p>
-                <p class="form__paragraph">Пригласите друзей и тех, кто захочет помочь Ночлежке.</p>
-                <p class="form__paragraph">Установите пожертвование, например кусочек пирога за любую комфортную сумму</p>
+                <p class="form__paragraph">Эти данные появятся в описании карточки вашего мероприятия в нашем каталоге событий</p>
               </div>
             </div>
 
-            <form class="form__form" id="party-form" action="party-contacts.html" name="party-form">
-              <div class="form__input-container form__bottom-line">
-                <div class="form-input form-input_active form-input_place_forms">
-                  <span>посиделки/вечеринка</span>
-                  <div class="form-input__checker form-input__checker_checked"></div>
-                </div>
-              </div>
-
-              <fieldset class="form__labeled-container form__bottom-line">
+            <form class="form__form" action ="./thanks-for-application.html" id="other-contacts" name="other-contacts">
+              <fieldset class="form__labeled-container form__labeled-container_place_form">
                 <div class="form__unit">
-                  <label class="form__label">город</label>
-                  <select class="form__field form__city-list" onfocus="clearErrors(this)" id="party-city" name="party-city">
-                    <option value="" style="display: none">выберите из списка</option>
-                    <option>Москва</option>
-                    <option>Санкт-Петербург</option>
-                  </select>
-                  <span class="form__error"></span>
-                </div>
-
-                <div class="form__unit">
-                  <label class="form__label" for="event-name">название мероприятия</label>
+                  <label class="form__label" for="event-clock">время проведения</label>
                   <input
                     class="form__field"
-                    id="event-name"
-                    name="event-name"
+                    id="event-clock"
+                    name="event-clock"
                     type="text"
-                    placeholder="введите название"
-                    value=""
-                    onkeyup="clearErrors(this)"
-                  />
-                  <span class="form__error"></span>
-                </div>
-              </fieldset>
-
-              <fieldset class="form__radio-block form__bottom-line">
-                <div class="form__radio-container">
-                  <label class="form__radio-unit">
-                    <span class="form__radio-icon form__radio-icon_checked"></span>
-                    <input class="form__radio" type="radio" id="party-public" name="party-public" value="public" />
-                    <span>открытое мероприятие</span>
-                  </label>
-                  <p class="form__radio-subtitle">адрес отобразим в карточке события</p>
-                </div>
-
-                <div class="form__radio-container">
-                  <label class="form__radio-unit">
-                    <span class="form__radio-icon"></span>
-                    <input class="form__radio" type="radio" id="party-private" name="party-private" value="private" />
-                    <span>закрытое мероприятие</span>
-                  </label>
-                  <p class="form__radio-subtitle form__radio-subtitle">адрес увидят только, те кому вы оправите ссылку на событие</p>
-                </div>
-              </fieldset>
-
-              <fieldset class="form__labeled-container">
-                <div class="form__unit">
-                  <label class="form__label" for="event-date">дата проведения</label>
-                  <input
-                    class="form__field"
-                    id="event-date"
-                    name="event-date"
-                    type="text"
-                    placeholder="укажите дату в формате дд.мм.гггг"
+                    placeholder="например: 18:00-22:00"
                     value=""
                     onkeyup="clearErrors(this)"
                   />
@@ -134,13 +79,13 @@
                 </div>
 
                 <div class="form__unit">
-                  <label class="form__label" for="contact-name">контактное лицо</label>
+                  <label class="form__label" for="event-address">адрес проведения</label>
                   <input
                     class="form__field"
-                    id="contact-name"
-                    name="contact-name"
+                    id="event-address"
+                    name="event-address"
                     type="text"
-                    placeholder="введите ФИО"
+                    placeholder="каждый адрес с новой строки"
                     value=""
                     onkeyup="clearErrors(this)"
                   />
@@ -148,7 +93,7 @@
                 </div>
 
                 <div class="form__unit">
-                  <label class="form__label" for="contact-number">телефон для связи с организатором</label>
+                  <label class="form__label" for="contact-number">номер телефона для бронирования</label>
                   <input
                     class="form__field"
                     id="contact-number"
@@ -161,17 +106,43 @@
                   />
                   <span class="form__error"></span>
                 </div>
+
+                <div class="form__unit">
+                  <label class="form__label" for="participate-price">стоимость участия</label>
+                  <input
+                    class="form__field"
+                    id="participate-price"
+                    name="participate-price"
+                    type="text"
+                    placeholder="укажите стоимость в рублях"
+                    value=""
+                    onkeyup="clearErrors(this)"
+                  />
+                  <span class="form__error"></span>
+                </div>
+
+                <div class="form__unit">
+                  <label class="form__label" for="other-description">описание</label>
+                  <textarea
+                    class="form__field form-input form__textarea form__textarea_size_l"
+                    name="other-description"
+                    id="other-description"
+                    placeholder="Напишите небольшое приглашение своим посетителям. Людям нравятся простые обращения, дружественный тон"
+                    onkeyup="clearErrors(this)"
+                  ></textarea>
+                  <span class="form__error"></span>
+                </div>
               </fieldset>
             </form>
           </div>
-
           <div class="form__controls">
-            <button type="button" class="form__control_type_back form-input form__control" onclick="location.href='pick-category.html';">
+            <button type="button" class="form__control_type_back form-input form__control" onclick="location.href='other-form.html';">
               назад
             </button>
+
             <button
               type="submit"
-              form="party-form"
+              form="other-contacts"
               class="form__control_type_submit form-input form__control form__control_active"
             ></button>
           </div>
@@ -244,7 +215,7 @@
                   >
                     <img
                       class="footer__social-icon"
-                      src="../images/facebook-logo.svg"
+                      src="./images/facebook-logo.svg"
                       alt="Логотип Facebook"
                     />
                   </a>
@@ -257,7 +228,7 @@
                   >
                     <img
                       class="footer__social-icon"
-                      src="../images/instagram-logo.svg"
+                      src="./images/instagram-logo.svg"
                       alt="Логотип Instagram"
                     />
                   </a>
@@ -270,7 +241,7 @@
                   >
                     <img
                       class="footer__social-icon"
-                      src="../images/vkontakte-logo.svg"
+                      src="./images/vkontakte-logo.svg"
                       alt="Логотип Вконтакте"
                     />
                   </a>
@@ -280,7 +251,7 @@
           </div>
         </div>
       </footer>
-      <script src="../scripts/participant-form.js"></script>
-      <script src="../scripts/form-validator.js"></script>
+      <script src="./scripts/participant-form.js"></script>
+      <script src="./scripts/form-validator.js"></script>
     </body>
 </html>
