@@ -4,6 +4,7 @@
   font-size: 48px;
   line-height: 52px;
   margin: 48px 0 0;
+  letter-spacing: -0.01em;
 }
 @media screen and (max-width:768px) {
   .thanks-page__title {

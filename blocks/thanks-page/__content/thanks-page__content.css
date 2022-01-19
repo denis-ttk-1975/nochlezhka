@@ -9,7 +9,7 @@
   .thanks-page__content {
     align-items: center;
     flex-direction: column;
-    margin: 40px 0;
+    margin: 40px 0 0;
     max-width: 360px;
   }
 }
