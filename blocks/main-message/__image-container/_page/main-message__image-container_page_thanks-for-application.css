@@ -1,0 +1,13 @@
+.main-message__image-container_page_thanks-for-application {
+  width: 385px;
+  height: 330px;
+  margin: 3px 26px 4px 49px;
+}
+
+@media screen and (max-width: 900px) {
+  .main-message__image-container_page_thanks-for-application  {
+    width: 293px;
+    height: 251px;
+    margin: 42px 20px 43px 7px;
+  }
+}

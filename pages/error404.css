@@ -27,14 +27,17 @@
 @import url(../blocks/header/__donate-text/header__donate-text.css);
 @import url(../blocks/header/_hidden/header_hidden.css);
 
-@import url(../blocks/error404/error404.css);
-@import url(../blocks/error404/__container/error404__container.css);
-@import url(../blocks/error404/__subcontainer/error404__subcontainer.css);
-@import url(../blocks/error404/__title/error404__title.css);
-@import url(../blocks/error404/__subtitle/error404__subtitle.css);
-@import url(../blocks/error404/__image-container/error404__image-container.css);
-@import url(../blocks/error404/__image/error404__image.css);
-@import url(../blocks/error404/__at-main-page-link/error404__at-main-page-link.css);
+@import url(../blocks/main-message/main-message.css);
+@import url(../blocks/main-message/__container/main-message__container.css);
+@import url(../blocks/main-message/__text-container/main-message__text-container.css);
+@import url(../blocks/main-message/__title/_page/main-message__title_page_error404.css);
+@import url(../blocks/main-message/__title/main-message__title.css);
+@import url(../blocks/main-message/__subtitle/main-message__subtitle.css);
+@import url(../blocks/main-message/__image-container/main-message__image-container.css);
+@import url(../blocks/main-message/__image-container/_page/main-message__image-container_page_error404.css);
+@import url(../blocks/main-message/__image/main-message__image.css);
+@import url(../blocks/main-message/__link/main-message__link.css);
+@import url(../blocks/main-message/_color/main-message_color_white.css);
 
 /* popup */
 @import url(../blocks/popup/popup.css);
@@ -82,12 +85,11 @@
 @import url(../blocks/events/events.css);
 @import url(../blocks/events/__wrapper/events__wrapper.css);
 @import url(../blocks/events/__title/events__title.css);
-@import url(../blocks/events/__title/_modif/events__title_modif_error404.css);
+@import url(../blocks/events/__title/_page-type/events__title_page-type_main-message.css);
 @import url(../blocks/events/__link/events__link.css);
 @import url(../blocks/events/__link/_type/events__link_type_view-all.css);
-
 @import url(../blocks/events/__cards-container/events__cards-container.css);
-@import url(../blocks/events/__cards-container/_modif/events__cards-container_modif_error404.css);
+@import url(../blocks/events/__cards-container/_page-type/events_cards-container_page-type_main-message.css);
 @import url(../blocks/events/__card/events__card.css);
 @import url(../blocks/events/__like-button/events__like-button.css);
 @import url(../blocks/events/__like-button/_active/events__like-button_active.css);
