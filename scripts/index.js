@@ -255,6 +255,8 @@ donateFormElement.addEventListener("submit", (evt) => {
   });
   sumOfMoneyButton[0].classList.add("popup__sum-of-money_active");
   donateFormElement.reset();
+
+  window.location.href = "./thanks-for-help.html";
 });
 
 ticketFormElement.addEventListener("submit", (evt) => {
@@ -269,13 +271,3 @@ ticketFormElement.addEventListener("submit", (evt) => {
   closePopup(popupTicket);
   ticketFormElement.reset();
 });
-
-const paymentButton = popupDonate.querySelector('.popup__donate-button');
-
-function makePayment () {
-  window.location.href = './thanks-for-help.html';
-}
-
-paymentButton.addEventListener('click', function () {
-  makePayment();
-})
