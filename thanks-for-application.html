@@ -10,7 +10,9 @@
   <body class="page">
     <header class="header">
       <div class="header__container">
-        <img src="./images/logo.svg" alt="logo" class="header__logo" />
+        <a href="index.html" class="header__logo">
+          <img src="./images/logo.svg" alt="Логотип">
+        </a>
         <div class="header__menu">
           <button type="button" class="header__location-button page__button">
             <img
@@ -50,29 +52,235 @@
     </header>
 
     <main class="content">
-      <section class="thanks-page">
-        <div class="thanks-page__content">
-          <div class="thanks-page__text-container">
-            <h2 class="thanks-page__title">спасибо за заявку!</h2>
-            <p class="thanks-page__description">
-              с вами свяжутся в ближайшее время
-            </p>
-            <a href="./index.html" class="thanks-page__button-to-main">
-              на главную
-            </a>
+      <section class="main-message main-message_color_violet">
+        <div class="main-message__container">
+          <div class="main-message__text-container">
+            <h1 class="main-message__title main-message__title_page_thanks-for-application">спасибо за заявку!</h1>
+            <p class="main-message__subtitle">с вами свяжутся в ближайшее время</p>
+            <a href="index.html" class="main-message__link page__link" target="_self">на главную</a>
           </div>
-          <img
-            src="./images/thanks-for-application_illustration.svg"
-            alt="Иллюстрация"
-            class="thanks-page__illustration"
-          />
+          <div class="main-message__image-container main-message__image-container_page_thanks-for-application">
+            <img  src="./images/thanks-for-application_illustration.svg" alt="Спасибо за заявку" class="main-message__image">
+          </div>
         </div>
-      </section>
+       </section>
 
-      <section class="events">
+       <section class="events">
         <div class="events__wrapper">
-          <h2 class="events__title">просто приятно посетить</h2>
-          <a href="./index.html" class="events__link events__link_type_view-all">смотреть все события</a>
+          <h2 class="events__title events__title_page-type_main-message">просто приятно посетить</h2>
+
+          <ul class="events__cards-container events__cards-container_page-type_main-message">
+            <li class="events__card">
+              <button type="button" aria-label="Мне нравится" class="events__like-button"></button>
+              <a href="#" class="events__card-image-link"><img src="./images/events-lecture.png"
+                  alt="Иллюстрация к лекции" class="events__card-image"></a>
+              <div class="events__card-nameplate">
+                <div class="events__card-details-container">
+                  <p class="events__card-detail events__card-detail_type_category">лекция</p>
+                  <p class="events__card-detail events__card-detail_type_date">1 мая, 12:30-13:50</p>
+                </div>
+                <div class="events__card-title-container">
+                  <a href="#" class="events__card-title">идентичность: почему нам сложно меняться?</a>
+                  <p class="events__card-description">лектор: Мария Бархатова</p>
+                </div>
+                <div class="events__card-details-container events__card-details-container_position_bottom">
+                  <p class="events__card-detail events__card-detail_type_place">улица Блохина, 22</p>
+                  <a href="#" class="events__card-detail events__card-detail_type_extra-options">+ ещё <span
+                      class="events__counter">3</span></a>
+                </div>
+              </div>
+            </li>
+
+            <li class="events__card">
+              <button type="button" aria-label="Мне нравится" class="events__like-button"></button>
+              <a href="#" class="events__card-image-link"><img src="./images/events-restaurant.png"
+                  alt="Иллюстрация к лекции" class="events__card-image"></a>
+              <div class="events__card-nameplate">
+                <div class="events__card-details-container">
+                  <p class="events__card-detail events__card-detail_type_category">еда и напитки</p>
+                  <p class="events__card-detail events__card-detail_type_date">Пн-Вс, 10:00-22:00</p>
+                </div>
+                <div class="events__card-title-container">
+                  <a href="#" class="events__card-title">xачапури и вино</a>
+                  <p class="events__card-description">капучино, эспрессо и американо в пользу Ночлежки</p>
+                </div>
+                <div class="events__card-details-container events__card-details-container_position_bottom">
+                  <p class="events__card-detail events__card-detail_type_place">Малая Конюшенная улица, </p>
+                  <a href="#" class="events__card-detail events__card-detail_type_extra-options">+ ещё <span
+                      class="events__counter">4</span></a>
+                </div>
+              </div>
+            </li>
+
+            <li class="events__card">
+              <button type="button" aria-label="Мне нравится" class="events__like-button"></button>
+              <a href="#" class="events__card-image-link"><img src="./images/events-coffee.png" alt="Иллюстрация к лекции"
+                  class="events__card-image"></a>
+              <div class="events__card-nameplate">
+                <div class="events__card-details-container">
+                  <p class="events__card-detail events__card-detail_type_category">еда и напитки</p>
+                  <p class="events__card-detail events__card-detail_type_date">Пн-Вс, 10:00-22:00</p>
+                </div>
+                <div class="events__card-title-container">
+                  <a href="#" class="events__card-title">coffee therapy</a>
+                  <p class="events__card-description">кофе и угощения в пользу Ночлежки</p>
+                </div>
+                <div class="events__card-details-container events__card-details-container_position_bottom">
+                  <p class="events__card-detail events__card-detail_type_place">улица Льва Толстого, 5</p>
+                  <a href="#" class="events__card-detail events__card-detail_type_extra-options">+ ещё <span
+                      class="events__counter">24</span></a>
+                </div>
+              </div>
+            </li>
+
+            <li class="events__card">
+              <button type="button" aria-label="Мне нравится" class="events__like-button"></button>
+              <a href="#" class="events__card-image-link"><img src="./images/events-cakes.png" alt="Иллюстрация к лекции"
+                  class="events__card-image"></a>
+              <div class="events__card-nameplate">
+                <div class="events__card-details-container">
+                  <p class="events__card-detail events__card-detail_type_category">посиделки</p>
+                  <p class="events__card-detail events__card-detail_type_date"></p>
+                </div>
+                <div class="events__card-title-container">
+                  <a href="#" class="events__card-title">апрельский хэллоуин у Ники</a>
+                  <p class="events__card-description">закрытое событие</p>
+                </div>
+                <div class="events__card-details-container events__card-details-container_position_bottom">
+                  <p class="events__card-detail events__card-detail_type_place"></p>
+                  <a href="#" class="events__card-detail events__card-detail_type_extra-options"><span
+                      class="events__counter"></span></a>
+                </div>
+              </div>
+            </li>
+
+            <li class="events__card">
+              <button type="button" aria-label="Мне нравится" class="events__like-button"></button>
+              <a href="#" class="events__card-image-link"><img src="./images/events-coffee.png" alt="Иллюстрация к лекции"
+                  class="events__card-image"></a>
+              <div class="events__card-nameplate">
+                <div class="events__card-details-container">
+                  <p class="events__card-detail events__card-detail_type_category">еда и напитки</p>
+                  <p class="events__card-detail events__card-detail_type_date">Пн-Вс, 10:00-22:00</p>
+                </div>
+                <div class="events__card-title-container">
+                  <a href="#" class="events__card-title">coffee therapy</a>
+                  <p class="events__card-description">кофе и угощения в пользу Ночлежки</p>
+                </div>
+                <div class="events__card-details-container events__card-details-container_position_bottom">
+                  <p class="events__card-detail events__card-detail_type_place">улица Льва Толстого, 5</p>
+                  <a href="#" class="events__card-detail events__card-detail_type_extra-options">+ ещё <span
+                      class="events__counter">24</span></a>
+                </div>
+              </div>
+            </li>
+
+            <li class="events__card">
+              <button type="button" aria-label="Мне нравится" class="events__like-button"></button>
+              <a href="#" class="events__card-image-link"><img src="./images/events-lecture.png"
+                  alt="Иллюстрация к лекции" class="events__card-image"></a>
+              <div class="events__card-nameplate">
+                <div class="events__card-details-container">
+                  <p class="events__card-detail events__card-detail_type_category">лекция</p>
+                  <p class="events__card-detail events__card-detail_type_date">1 мая, 12:30-13:50</p>
+                </div>
+                <div class="events__card-title-container">
+                  <a href="#" class="events__card-title">идентичность: почему нам сложно меняться?</a>
+                  <p class="events__card-description">лектор: Мария Бархатова</p>
+                </div>
+                <div class="events__card-details-container events__card-details-container_position_bottom">
+                  <p class="events__card-detail events__card-detail_type_place">улица Блохина, 22</p>
+                  <a href="#" class="events__card-detail events__card-detail_type_extra-options">+ ещё <span
+                      class="events__counter">3</span></a>
+                </div>
+              </div>
+            </li>
+
+            <li class="events__card">
+              <button type="button" aria-label="Мне нравится" class="events__like-button"></button>
+              <a href="#" class="events__card-image-link"><img src="./images/events-restaurant.png"
+                  alt="Иллюстрация к лекции" class="events__card-image"></a>
+              <div class="events__card-nameplate">
+                <div class="events__card-details-container">
+                  <p class="events__card-detail events__card-detail_type_category">еда и напитки</p>
+                  <p class="events__card-detail events__card-detail_type_date">Пн-Вс, 10:00-22:00</p>
+                </div>
+                <div class="events__card-title-container">
+                  <a href="#" class="events__card-title">xачапури и вино</a>
+                  <p class="events__card-description">капучино, эспрессо и американо в пользу Ночлежки</p>
+                </div>
+                <div class="events__card-details-container events__card-details-container_position_bottom">
+                  <p class="events__card-detail events__card-detail_type_place">Малая Конюшенная улица, </p>
+                  <a href="#" class="events__card-detail events__card-detail_type_extra-options">+ ещё <span
+                      class="events__counter">4</span></a>
+                </div>
+              </div>
+            </li>
+
+            <li class="events__card">
+              <button type="button" aria-label="Мне нравится" class="events__like-button"></button>
+              <a href="#" class="events__card-image-link"><img src="./images/events-coffee.png" alt="Иллюстрация к лекции"
+                  class="events__card-image"></a>
+              <div class="events__card-nameplate">
+                <div class="events__card-details-container">
+                  <p class="events__card-detail events__card-detail_type_category">еда и напитки</p>
+                  <p class="events__card-detail events__card-detail_type_date">Пн-Вс, 10:00-22:00</p>
+                </div>
+                <div class="events__card-title-container">
+                  <a href="#" class="events__card-title">coffee therapy</a>
+                  <p class="events__card-description">кофе и угощения в пользу Ночлежки</p>
+                </div>
+                <div class="events__card-details-container events__card-details-container_position_bottom">
+                  <p class="events__card-detail events__card-detail_type_place">улица Льва Толстого, 5</p>
+                  <a href="#" class="events__card-detail events__card-detail_type_extra-options">+ ещё <span
+                      class="events__counter">24</span></a>
+                </div>
+              </div>
+            </li>
+
+            <li class="events__card">
+              <button type="button" aria-label="Мне нравится" class="events__like-button"></button>
+              <a href="#" class="events__card-image-link"><img src="./images/events-cakes.png" alt="Иллюстрация к лекции"
+                  class="events__card-image"></a>
+              <div class="events__card-nameplate">
+                <div class="events__card-details-container">
+                  <p class="events__card-detail events__card-detail_type_category">посиделки</p>
+                  <p class="events__card-detail events__card-detail_type_date"></p>
+                </div>
+                <div class="events__card-title-container">
+                  <a href="#" class="events__card-title">апрельский хэллоуин у Ники</a>
+                  <p class="events__card-description">закрытое событие</p>
+                </div>
+                <div class="events__card-details-container events__card-details-container_position_bottom">
+                  <p class="events__card-detail events__card-detail_type_place"></p>
+                  <a href="#" class="events__card-detail events__card-detail_type_extra-options"><span
+                      class="events__counter"></span></a>
+                </div>
+              </div>
+            </li>
+
+            <li class="events__card">
+              <button type="button" aria-label="Мне нравится" class="events__like-button"></button>
+              <a href="#" class="events__card-image-link"><img src="./images/events-coffee.png" alt="Иллюстрация к лекции"
+                  class="events__card-image"></a>
+              <div class="events__card-nameplate">
+                <div class="events__card-details-container">
+                  <p class="events__card-detail events__card-detail_type_category">еда и напитки</p>
+                  <p class="events__card-detail events__card-detail_type_date">Пн-Вс, 10:00-22:00</p>
+                </div>
+                <div class="events__card-title-container">
+                  <a href="#" class="events__card-title">coffee therapy</a>
+                  <p class="events__card-description">кофе и угощения в пользу Ночлежки</p>
+                </div>
+                <div class="events__card-details-container events__card-details-container_position_bottom">
+                  <p class="events__card-detail events__card-detail_type_place">улица Льва Толстого, 5</p>
+                  <a href="#" class="events__card-detail events__card-detail_type_extra-options">+ ещё <span
+                      class="events__counter">24</span></a>
+                </div>
+              </div>
+            </li>
+          </ul>
+          <a href="index.html" class="events__link events__link_type_view-all">смотреть все события</a>
         </div>
       </section>
     </main>
