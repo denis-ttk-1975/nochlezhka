@@ -1,8 +1,11 @@
-.events__title_page-type_main-message {}
+.events__title_page-type_main-message {
+  letter-spacing: -0.01em;
+}
 
 
 @media screen and (max-width: 700px) {
   .events__title_page-type_main-message {
+      letter-spacing: 0;
       margin: 20px auto;
       line-height: 36px;
       font-size: 32px;
