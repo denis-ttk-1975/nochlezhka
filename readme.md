@@ -1,7 +1,12 @@
-New GitHub Pages for Team5: https://denis-ttk-1975.github.io/nochlezhka/
+# adaptive website layout for a charity project helping the homeless
+# адаптивная верстка сайта для благотворительного проекта помощи бездомным  
 
-IMPORTANT !!!!!
+#### Example internet-page available at https://denis-ttk-1975.github.io/nochlezhka/
+#### Работающий сайт размещен на https://denis-ttk-1975.github.io/nochlezhka/
 
-This is MAIN branch!!!
-Dont commit to this branch!!!
-Dont merge to this branch without pull-request!!!!
+## Author - Denis Ulesov
+## Автор - Денис Улесов
+
+#### Used tools: HTTP, CSS, JS
+#### Используемые библиотеки и фреймворки: HTTP, CSS, JS
+
